@@ -9,8 +9,8 @@ type FormData = {
 };
 
 const Form = () => {
-    const [formData, setFormData] = useState<FormData>({ name: '', telegram: '' });
-    const [message, setMessage] = useState<string>('');
+    const [formData,setFormData] = useState<FormData>({name: '',telegram: ''});
+    const [message,setMessage] = useState<string>('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const {name,value}=e.target;
@@ -49,7 +49,6 @@ const Form = () => {
     return (
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
-            <label htmlFor="name">Имя:</label>
             <input
               type="text"
               id="name"
@@ -61,7 +60,6 @@ const Form = () => {
             />
           </div>
           <div className={styles.field}>
-            <label htmlFor="telegram">Telegram (@username):</label>
             <input
               type="text"
               id="telegram"

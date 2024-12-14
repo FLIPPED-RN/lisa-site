@@ -2,23 +2,19 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   const { name, telegram } = await req.json(); 
-  const BOT_TOKEN = 'YOUR_BOT_TOKEN';
+  const BOT_TOKEN = '7559277781:AAFvhxAlszD0JcUlwTL9QO2JRIFQ0kLh8EQ';
 
-  const CHAT_ID = 'YOUR_CHAT_ID';
-
-  const message = `Имя: ${name}\nTelegram: ${telegram}`;
+  const message = `Новая заявка \n Имя: ${name}\n Telegram: ${telegram}`;
 
   const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
   try {
-    // Отправляем POST-запрос в Telegram API
     const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        chat_id: CHAT_ID,
         text: message,
       }),
     });
