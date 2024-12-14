@@ -7,8 +7,8 @@ export default function Header() {
       <div>
         <Image 
           src={'/lisa-logo.svg'}
-          width={200}
-          height={100}
+          width={60}
+          height={50}
           alt=""
         />
       </div>
