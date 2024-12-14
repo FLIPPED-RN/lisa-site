@@ -35,10 +35,10 @@ const Form = () => {
             const data = await response.json();
 
             if(data.success){
-                setMessage('Данные успешно отправлены!');
+                setMessage('Ваша заявка отправлена!');
                 setFormData({name: '', telegram: ''});
             }else{
-                setMessage('Ошибка отправки данных!');
+                setMessage('Ошибка отправки заявки!');
             }
 
         } catch (error) {

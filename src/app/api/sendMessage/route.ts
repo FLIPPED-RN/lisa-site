@@ -4,7 +4,9 @@ export async function POST(req: Request) {
   const { name, telegram } = await req.json(); 
   const BOT_TOKEN = '7559277781:AAFvhxAlszD0JcUlwTL9QO2JRIFQ0kLh8EQ';
 
-  const message = `Новая заявка \n Имя: ${name}\n Telegram: ${telegram}`;
+  const CHAT_ID = '1619191387';
+
+  const message = `Имя: ${name}\nTelegram: ${telegram}`;
 
   const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
@@ -15,6 +17,7 @@ export async function POST(req: Request) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        chat_id: CHAT_ID,
         text: message,
       }),
     });
