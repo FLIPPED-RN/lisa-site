@@ -88,7 +88,7 @@ export default function Home() {
                     className={styles.no__drag}
                   />
                   <p className={styles.overlay__text}>Управляй ресурсами эффективно 
-                  с нашей системой умного мониторинга. Прозрачная аналитика в каждом доме.</p>
+                  с нашей систeмой умного мониторинга. Прозрачная аналитика в каждом доме.</p>
                 </div>
               </div>
             </div>
@@ -112,11 +112,27 @@ export default function Home() {
                 <Form />
               </div>
               <div className={styles.application__grid}>
-                <div>
-
+                <div className={styles.application__text}>
+                  <div>
+                    <h2>Консультация по вашему проекту</h2>
+                    <Image 
+                      src={'/lisa-grid-vector.svg'}
+                      width={400}
+                      height={50}
+                      alt="vector"
+                    />
+                  </div>
+                  <div>
+                    <p>Наши менеджеры оперативно свяжутся с вами в Telegram, ответят на все ваши вопросы и предоставят максимально подробную консультацию</p>
+                  </div>
                 </div>
                 <div>
-
+                  <Image 
+                    src={'/lisa-grid.svg'}
+                    width={800}
+                    height={500}
+                    alt="vector"
+                  />
                 </div>
               </div>
             </div>
